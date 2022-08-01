@@ -1,7 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import core.BaseSelenideConfiguration;
+import core.BaseSelenideTest;
 
 import java.io.File;
 
@@ -9,17 +9,17 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class PageRegisrtation extends BaseSelenideConfiguration {
+public class PageRegisrtation extends BaseSelenideTest {
 
     private SelenideElement firstName = $x("//input[@placeholder = 'First Name']");
     private SelenideElement selenideElement = $x("//input[@placeholder = 'First Name']");
 
-    public PageRegisrtation firstNameInput(String firsName) {
+    public PageRegisrtation setFirstName(String firsName) {
         $x("//input[@placeholder = 'First Name']").setValue(firsName);
         return this;
     }
 
-    public PageRegisrtation lastNameInput(String firsName) {
+    public PageRegisrtation setlastName(String firsName) {
         $x("//input[@placeholder = 'Last Name']").setValue(firsName);
         return this;
     }

@@ -3,12 +3,14 @@ package core;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 
-public class BaseSelenideConfiguration {
+public class BaseSelenideTest {
 
-    @BeforeAll
-    void configuration() {
+    @BeforeEach
+    public void configuration() {
         Configuration.baseUrl = "https://demoqa.com";
 
         Configuration.timeout = 10000;
@@ -16,8 +18,8 @@ public class BaseSelenideConfiguration {
 
     }
 
-    @AfterAll
-    void close() {
+    @AfterEach
+    public void close() {
         Selenide.closeWebDriver();
     }
 
