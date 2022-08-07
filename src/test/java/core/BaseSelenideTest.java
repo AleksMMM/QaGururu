@@ -11,7 +11,7 @@ public class BaseSelenideTest {
 
     @BeforeEach
     public void configuration() {
-        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.baseUrl = "https://github.com/";
 
         Configuration.timeout = 10000;
         Configuration.browserSize = "1920x1080";
